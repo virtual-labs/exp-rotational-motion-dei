@@ -1,1 +1,1 @@
-## Experiment name
+## Rotational Dynamics and Work-Energy Verification
