@@ -192,8 +192,3 @@ By measuring $a$ (via time‑distance kinematics) and $\alpha$ (using angular se
 
 ---
 
-
-
----
-
-*End of Document*
