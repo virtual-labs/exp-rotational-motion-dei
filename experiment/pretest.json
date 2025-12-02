@@ -110,6 +110,18 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is a potential source of error in this experiment?",
+      "answers": {
+        "a": "Perfectly rigid disc",
+        "b": "Zero air resistance",
+        "c": "Friction in the disc axle",
+        "d": "Ideal sensors with no noise"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
+
   ]
 }
