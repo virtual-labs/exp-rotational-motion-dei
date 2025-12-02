@@ -194,4 +194,15 @@ By measuring $a$ (via time‑distance kinematics) and $\alpha$ (using angular se
    verifying energy conservation when friction is negligible. These relations allow direct testing of Newton's laws and energy principles through measurable quantities like $\alpha$, $\omega$, and $h$.
 
 ---
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
