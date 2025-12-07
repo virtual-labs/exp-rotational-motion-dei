@@ -1,5 +1,4 @@
 
-
 const getElement = (id)=>{
     return document.getElementById(id);
 }
@@ -212,20 +211,16 @@ function updateSystem(currentTime) {
 
         getElement('showObservationsBtn').hidden = false;
         getElement('download-graph').hidden =false
+        drawAngularAccelerationGraph(angularAccelerations,torqueValues);
         generateObservations(true)
         populateTable();
         stopAnimation();
       return;
   }
 
-  drawAngularAccelerationGraph(angularAccelerations,torqueValues);
   drawSetup();
 
 
-
-
-
-     
 }
 
 
