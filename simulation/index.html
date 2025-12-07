@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Rotational Dynamics and Work-Energy Verification</title>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="container">
+            <div id="header">
+                <h2 >Rotational Dynamics and Work-Energy Verification</h2>
+
+            </div>
+
+            <div id="simulation">
+
+
+            <div id="leftPane">
+
+                <div style="margin-top: 50px; padding-left: 20px;" id="inputs_container">
+    
+                    <div id="massDiscInput">
+                        <label for="massDisc">Mass of Disc (M) in kg:</label>
+                        <br>
+                        <input type="range" id="massDisc" min="1" step="0.1" max="5" value="1" />
+                        <span id="massDisc_value">1</span>
+                    </div>
+                    
+                    <div id="radiusDiscInput">
+                        <label for="radiusDisc">Radius of Disc (r) in cm:</label>
+                        <br>
+                        <input type="range" id="radiusDisc" min="10" step="1" max="20" value="10" />
+                        <span id="radiusDisc_value">10</span>
+                    </div>
+                    
+                    <div id="massHangingInput">
+                        <label for="massHanging">Mass of Hanging Object (m) in kg:</label>
+                        <br>
+                        <input type="range" id="massHanging" min="0.1" step="0.1" max="1" value="0.1" />
+                        <span id="massHanging_value">0.1</span>
+                    </div>
+                    
+                    <!-- <div id="stringLengthInput">
+                        <label for="stringLength">String Length (l) in meters:</label>
+                        <br>
+                        <input type="range" id="stringLength" min="1" step="0.1" max="2" value="1" />
+                        <span id="stringLength_value">1</span>
+                    </div> -->
+                    
+                    <div id="heightFallInput">
+                        <label for="heightFall">Height of Fall (h) in meters:</label>
+                        <br>
+                        <input type="range" id="heightFall" min="1" step="0.1" max="2" value="1" />
+                        <span id="heightFall_value">1</span>
+                    </div>
+                
+                    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
+                        <label for="lock_button" style="font-size: 16px; color: black; font-weight: bold;">Lock the values</label>
+                        <input type="checkbox" id="lock_button" style="margin-top: 10px; transform: scale(1.5);" onclick="checkBox()">
+                    </div>
+                    
+                    
+                
+                </div>
+
+
+                <div id="theoretical_results" style="margin-top: 10px; display: flex; flex-direction: column; align-items: center; padding: 10px;  width: 100%; max-width: 200px; text-align: center;">
+                    <div style="padding: 5px 0;">
+                        <span style="font-weight: bold; font-size: 14px;">Moment of Inertia (I)</span><br>
+                        <span style="font-size: 16px; font-weight: bold;"> <span id="inertia_theoretical">0</span> kg·m²</span>
+                    </div>
+                
+                    <div style="width: 80%; height: 1px; background-color: black; margin: 5px 0;"></div>
+                
+                    <div style="padding: 5px 0;">
+                        <span style="font-weight: bold; font-size: 14px;">Torque (τ)</span><br>
+                        <span style="font-size: 16px; font-weight: bold;"> <span id="torque_theoretical">0</span> N·m</span>
+                    </div>
+                </div>
+                
+
+                
+                
+                
+                
+                
+            
+
+                
+
+                
+
+
+            </div>
+
+            <div id="middlePane">
+
+                <div id="canvasContainer">
+                  <canvas id="cnv1" height="540px" width="480px"></canvas>
+                  <canvas id="cnv2" height="540px" width="480px"></canvas>
+
+                </div>
+               
+                
+                
+            </div>
+
+
+            <div  id="rightPane" >
+              <div class="controls">
+                <div class="control_heading"><b>Controls:</b></div>
+                <div class="play">
+                  Start
+                  <button type="play" id="playButton">
+                    <img src="images/play.png" />
+                  </button>
+                </div>
+                <div class="pause">
+                  Pause
+                  <button type="button" id="pauseButton">
+                    <img src="images/pause.png" alt="Pause" />
+                  </button>
+                </div>
+                <div id="reset">
+                  Reset
+                  <button type="reset" id="resetButton">
+                    <img src="images/reset.png" />
+                  </button>
+                </div>
+              </div>
+  
+              <div  id="update_cor">Start the simulation by pressing start.</div>
+              <br>
+              <div class="stopwatch" id="stopwatch">Time: 0.00 s</div>
+  
+           
+  
+  
+             
+
+
+  <div class="output">    
+    <div id="button-container">
+      
+       <button id="formula-button" onclick="showFormulaeModal()">Show Formulae</button>
+       <button hidden  id="showObservationsBtn">Show Observations</button>
+      
+       <button  hidden id="download-graph">Download Graph</button>
+    </div>
+              
+
+
+</div>
+
+<!-- Formulae Modal Structure -->
+<div id="formulaeModal" class="modal">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span id="closeFormulaeModal" class="close-button">&times;</span>
+    
+    <!-- Formulae Container -->
+    <div id="formulaeContainer">
+      <h3>Formulae</h3>
+      <ul id="formulaeList"></ul>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Modal Structure -->
+ <div id="resultsModal">
+  <div class="modal-content">
+     <!-- Close Button -->
+     <span id="closeResultsModal" class="close-button">&times;</span>
+     <!-- Modal Header -->
+     <h2 class="modal-title">Results and Observations</h2>
+     <!-- Input Data Container -->
+     <div id="inputDataContainer" class="input-data-container">
+        <ul id="inputDataList"></ul>
+     </div>
+     <!-- Table Container -->
+     <div id="resultsTableContainer" class="results-table-container">
+        <!-- Table will be populated dynamically -->
+     </div>
+     <!-- Download Button -->
+     <button id="download-btn" class="download-button" onclick="downloadResults()">Download Data</button>
+  </div>
+</div>
+
+
+            </div>
+
+            
+
+
+
+            
+
+        </div>
+
+    </div>
+
+
+
+    <script src="./js/script.js"></script>
+    <div id="copyright"
+    title="Developer : Harsh Pathak, Aysha and Ambuj, Subject Expertise : Mr.Mohd. Sharique Ahmad, Dayalbagh Educational Instiute,Agra ">
+  </div>
+  <div id="Developer_information" title="Developer Name:
+               1.Harsh Pathak
+                 (06hpathak@gmail.com)
+               2.Aysha
+                 (satsangiaysha@gmail.com)
+               3.Ambuj Kulshreshtha
+                 (ambujkulshreshtha@gmail.com)
+  Subject Expertise : Mr.Mohd. Sharique Ahmad
+  Instiute Name: Dayalbagh Educational Instiute, Agra">
+  </div>
+    
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+
+</html>

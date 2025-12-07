@@ -1,0 +1,25 @@
+
+/home/runner/work/exp-rotational-motion-dei/exp-rotational-motion-dei/experiment/simulation/js/script.js
+   99:7   warning  'checkBox' is assigned a value but never used      no-unused-vars
+  136:5   warning  'pulleyRadius' is assigned a value but never used  no-unused-vars
+  142:5   warning  'time' is assigned a value but never used          no-unused-vars
+  151:5   warning  'KEValues' is assigned a value but never used      no-unused-vars
+  155:5   warning  'prevOmega' is assigned a value but never used     no-unused-vars
+  156:5   warning  'prevTime' is assigned a value but never used      no-unused-vars
+  165:5   warning  'finalKE' is assigned a value but never used       no-unused-vars
+  251:11  warning  'yScale' is assigned a value but never used        no-unused-vars
+  255:11  warning  'xScale' is assigned a value but never used        no-unused-vars
+  368:10  warning  'showFormulaeModal' is defined but never used      no-unused-vars
+  475:31  warning  'stopped' is defined but never used                no-unused-vars
+  512:11  warning  'g' is assigned a value but never used             no-unused-vars
+  589:5   warning  'resultsTableContainer' is not defined             no-undef
+  596:1   warning  'showObservationsBtn' is not defined               no-undef
+  597:5   warning  'resultsModal' is not defined                      no-undef
+  601:1   warning  'closeResultsModal' is not defined                 no-undef
+  602:5   warning  'resultsModal' is not defined                      no-undef
+  607:26  warning  'resultsModal' is not defined                      no-undef
+  608:9   warning  'resultsModal' is not defined                      no-undef
+  664:20  warning  'offset' is defined but never used                 no-unused-vars
+
+✖ 20 problems (0 errors, 20 warnings)
+

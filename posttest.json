@@ -1,0 +1,126 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which of the following graphs best represents the relationship between torque and angular acceleration?",
+      "answers": {
+        "a": "A straight line with negative slope",
+        "b": "A straight line passing through the origin",
+        "c": "A horizontal line",
+        "d": "A curve opening downward"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the radius of the disc is increased, while keeping the mass and torque constant, what happens to the angular acceleration?",
+      "answers": {
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains constant",
+        "d": "Becomes infinite"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the experiment, which factor does not affect the moment of inertia of the disc?",
+      "answers": {
+        "a": "Mass of the disc",
+        "b": "Radius of the disc",
+        "c": "Shape of the disc",
+        "d": "Mass of the hanging object"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which condition must be true for the string to unwind without slipping?",
+      "answers": {
+        "a": "High friction between string and disc",
+        "b": "No torque applied",
+        "c": "Tangential velocity of string = Angular velocity × Radius",
+        "d": "Massless string"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How do you verify the work-energy theorem in this experiment?",
+      "answers": {
+        "a": "Compare applied force with torque",
+        "b": "Compare potential energy lost with rotational kinetic energy gained",
+        "c": "Compare mass of the object with disc's inertia",
+        "d": "Measure string length only"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why does the hanging mass accelerate as it falls in this setup?",
+      "answers": {
+        "a": "Due to a constant linear velocity",
+        "b": "Due to the torque causing angular acceleration in the disc",
+        "c": "Because of air resistance",
+        "d": "Due to decreasing moment of inertia"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The work done by the torque is completely converted into:",
+      "answers": {
+        "a": "Thermal energy",
+        "b": "Electrical energy",
+        "c": "Rotational kinetic energy",
+        "d": "Linear momentum"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the tension in the string is increased, what happens to the torque on the disc?",
+      "answers": {
+        "a": "It decreases",
+        "b": "It increases",
+        "c": "Remains the same",
+        "d": "Becomes negative"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the simulation, what would be the effect of increasing the radius of the disc while keeping mass constant?",
+      "answers": {
+        "a": "Increase in moment of inertia",
+        "b": "Decrease in moment of inertia",
+        "c": "No change in torque",
+        "d": "Increase in angular acceleration"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The experiment validates which physical law or theorem?",
+      "answers": {
+        "a": "Newton’s Second Law of Motion",
+        "b": "Hooke’s Law",
+        "c": "Bernoulli’s Principle",
+        "d": "Work-Energy Theorem"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "To verify the work–energy theorem, which comparison should be made using your measured data?",
+      "answers": {
+        "a": "Experimental torque vs. disc radius",
+        "b": "Theoretical kinetic energy vs. experimental kinetic energy",
+        "c": "Mass of the disc vs. mass of the string",
+        "d": "Initial height vs. disc radius"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
