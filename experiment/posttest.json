@@ -110,6 +110,17 @@
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
+    },
+    {
+      "question": "To verify the work–energy theorem, which comparison should be made using your measured data?",
+      "answers": {
+        "a": "Experimental torque vs. disc radius",
+        "b": "Theoretical kinetic energy vs. experimental kinetic energy",
+        "c": "Mass of the disc vs. mass of the string",
+        "d": "Initial height vs. disc radius"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
   ]
 }
